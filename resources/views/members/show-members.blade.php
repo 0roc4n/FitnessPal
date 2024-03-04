@@ -9,7 +9,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                <table class="table table-size mt-4 hover" id="example">
+                    <div class="text-end"><a href="{{route('member.add')}}" class="btn btn-primary">Add Member</a></div>
+                <table class="table mt-4 hover" id="example">
                     <thead class="text-center">
                         <tr>
                             <th scope="col">List</th>
