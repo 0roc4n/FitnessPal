@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PlanController;
+use Database\Factories\MembersFactory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +31,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/members', [MemberController::class, 'index'])->name('member.index');
+    Route::get('/member/add', [MemberController::class, 'addmember'])->name('member.add');
+    Route::post('/members', [MemberController::class, 'store'])->name('member.store');
+
+    Route::get('/plans', [PlanController::class, 'index'])->name('plans');
+    Route::post('/plan-add', [PlanController::class, 'store'])->name('plan.add');
 });
 
 require __DIR__.'/auth.php';
